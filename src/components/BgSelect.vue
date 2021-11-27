@@ -1,18 +1,16 @@
 <template>
-  <div>
-    <v-select
-      filled
-      :items="options"
-      item-text="text"
-      item-value="type"
-      label="Seleccionar un tipo de juego"
-      dense
-      return-object
-      single-line
-      @change="changeTipo"
-      v-model="tipoDeJuego"
-    ></v-select>
-  </div>
+  <v-select
+    filled
+    :items="options"
+    item-text="text"
+    item-value="type"
+    :label="texto"
+    dense
+    return-object
+    single-line
+    @change="changeTipo"
+    v-model="tipoDeJuego"
+  ></v-select>
 </template>
 
 <script>
@@ -21,6 +19,10 @@
     props: {
       options: { 
         type: Array 
+      },
+      texto: {
+        type: String,
+        default: "Seleccioná una opción"
       }
     },
     data: function () {
@@ -33,8 +35,6 @@
     },
     methods: {
       changeTipo: function () {
-        console.log("child changed: " + this.tipoDeJuego.type);
-
         this.$emit('input', this.tipoDeJuego);
       }
     }

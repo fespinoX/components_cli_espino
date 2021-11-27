@@ -2,11 +2,11 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
+      color="yellow"
       dark
     >
       <div class="d-flex align-center">
-        <p>Boardgametor 2000</p>
+        <h1>Boardgametor 2000</h1>
       </div>
 
       <v-spacer></v-spacer>
@@ -41,3 +41,24 @@ export default {
   }),
 };
 </script>
+
+<style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500;600;700&display=swap');
+  * {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+</style>
+<style lang="sass" scoped>
+
+  .v-toolbar
+    h1
+      font-size: 1.2rem
+      color: #000
+
+    .v-btn
+      background-color: #000
+      color: yellow
+
+</style>
